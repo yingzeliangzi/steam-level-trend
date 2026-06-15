@@ -1,0 +1,13 @@
+name = "steam-level-trend"
+main = "src/worker.js"
+compatibility_date = "2024-11-01"
+
+# 静态前端：public/ 目录由 Cloudflare 直接托管，
+# 未命中静态文件的请求（如 /api/profile）才会进入 Worker。
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+# STEAM_API_KEY 不写在这里。
+# 部署用：  wrangler secret put STEAM_API_KEY
+# 本地开发：在 .dev.vars 里写 STEAM_API_KEY=xxxx（已被 .gitignore 忽略）

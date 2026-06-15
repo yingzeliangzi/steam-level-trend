@@ -1,0 +1,15 @@
+{
+  "name": "steam-level-trend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "根据 Steam 勋章获得时间绘制经验/等级随时间变化的趋势折线图",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "wrangler": "^3.90.0"
+  }
+}
